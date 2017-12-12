@@ -7,8 +7,8 @@ swagger: '2.0'
 schemes:
   - http # Remove if your API doesn't support HTTP
   - https # Remove if your API donsn't support HTTPS
-host: example.com # Replace with your hostname. You can also specify port e.g. example.com:777
-basePath: /api/v1 # Replace with your basePath. Note: SHOULD begin with '/'.
+host: api.oslo.kommune.no # Replace with your hostname. You can also specify port e.g. example.com:777
+basePath: /ekspempel-api/v1 # Replace with your basePath. Note: SHOULD begin with '/'.
 info:
   # Describe your API here, you can use GFM (https://guides.github.com/features/mastering-markdown) here
   description: |
@@ -31,18 +31,17 @@ info:
   # It can be any string but it is better to use semantic versioning: http://semver.org/
   # Warning: OpenAPI require version to be string, but without quotation YAML can recognize it as number.
 
-  title: Example.com # Replace with your API title
+  title: Oslo kommune - OpenApi Repository Example # Replace with your API title
   # Keep it simple. Don't add "API" or verison at the end of the string.
 
   termsOfService: 'https://example.com/terms/' # [Optional] Replace with an URL to your ToS
   contact:
-    email: contact@example.com # [Optional] Replace with your contact email
-    url: 'http://example.com/contact' # [Optional] Replace with link to your contact form
+    url: 'https://www.oslo.kommune.no/kontakt/' # [Optional] Replace with link to your contact form
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   x-logo:
-    url: 'https://apis.guru/openapi-template/logo.png'
+    url: 'https://www.oslo.kommune.no/assets/images/byvaapenet-retina.png'
 externalDocs:
   description: Find out how to create Github repo for your OpenAPI spec.
   url: 'https://github.com/Rebilly/generator-openapi-repo'
@@ -74,7 +73,7 @@ securityDefinitions:
   main_auth: # security definition name (you can name it as you want)
     type: oauth2 # authorization type, one of: oauth2, basic, apiKey
     # the following options are specific to oauth2 type
-    authorizationUrl: 'http://example.com/api/oauth/dialog'
+    authorizationUrl: 'http://login.oslo.kommune.no/api/oauth/'
     flow: implicit
     scopes:
       'read:users': read users info
@@ -84,8 +83,6 @@ securityDefinitions:
     # The following options are specific to apiKey type
     in: header # Where API key will be passed: header or query
     name: api_key # API key paramteer name
-  basic_auth: # security definition name (you can name it as you want)
-    type: basic
 
 # Holds the relative paths to the individual endpoints. The path is appended to the
 # basePath in order to construct the full URL. 
